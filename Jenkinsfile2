@@ -1,0 +1,19 @@
+Jenkins pipeline as code 
+1: archiv 'https://github.com/ramkinkarsingh/jenkins_16.git'
+
+pipeline {
+    agent any
+    stages{
+        stage('Build'){
+            steps {
+                sh 'mvn clean package'
+            }
+            post {
+                success {
+                    echo 'Now Archiving...'
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
+            }
+        }
+    }
+}
