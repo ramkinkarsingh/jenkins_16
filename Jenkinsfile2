@@ -1,15 +1,17 @@
 //Jenkins pipeline as code 
 //1: archiv 'https://github.com/ramkinkarsingh/jenkins_16.git'
 
-   git url: 'https://github.com/ramkinkarsingh/jenkins_16.git'
-   sh 'git clean -fdx; sleep 4;'
+   
 
 pipeline {
     agent any
+    
     stages{
         stage('Build'){
             steps {
-                sh 'mvn clean package'
+               git url: 'https://github.com/ramkinkarsingh/jenkins_16.git'
+               sh 'git clean -fdx; sleep 4;'
+               sh 'mvn clean package'
             }
             post {
                 success {
