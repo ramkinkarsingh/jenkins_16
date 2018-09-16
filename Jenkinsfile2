@@ -22,4 +22,10 @@ node {
    // map artifacts to Jenkins builds
    sh 'ansible --version'
    
+   
+   
+    stage ('Deployments')
+    echo "Copy file"
+    sh "cp *.xml  /home/edureka/ramkinkar/"
+   
    }
