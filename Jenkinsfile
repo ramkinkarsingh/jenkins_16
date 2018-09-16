@@ -14,6 +14,12 @@ node {
    // ** NOTE: This 'mvn' maven tool must be configured
    // **       in the global configuration.
    def mvnHome = tool 'mvn'
+   
+   stage 'Ansible'
+   // set the version of the build artifact to the Jenkins BUILD_NUMBER so you can
+   // map artifacts to Jenkins builds
+   sh "${ansible} --version"
+ 
 
    stage 'build'
    // set the version of the build artifact to the Jenkins BUILD_NUMBER so you can
