@@ -1,4 +1,4 @@
-Jenkins pipeline as code 
+//Jenkins pipeline as code 
 1: archiv 'https://github.com/ramkinkarsingh/jenkins_16.git'
 
 pipeline {
