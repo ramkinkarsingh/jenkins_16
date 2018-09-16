@@ -26,6 +26,6 @@ node {
    
     stage ('Deployments')
     echo "Copy file"
-    sh "cp *.xml  /home/edureka/ramkinkar/"
+    sh 'cp *.xml  /home/edureka/ramkinkar/'
    
    }
