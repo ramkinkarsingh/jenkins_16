@@ -1,5 +1,8 @@
 //Jenkins pipeline as code 
-1: archiv 'https://github.com/ramkinkarsingh/jenkins_16.git'
+//1: archiv 'https://github.com/ramkinkarsingh/jenkins_16.git'
+
+   git url: 'https://github.com/ramkinkarsingh/jenkins_16.git'
+   sh 'git clean -fdx; sleep 4;'
 
 pipeline {
     agent any
